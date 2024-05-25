@@ -7,7 +7,12 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format:all": "prettier --write src",
+    "format": "pretty-quick"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx pretty-quick --staged"
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -22,6 +27,11 @@
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
+    "prettier": "^3.2.5",
+    "prettier-plugin-organize-imports": "^3.2.4",
+    "prettier-plugin-tailwindcss": "^0.5.14",
+    "pretty-quick": "^4.0.0",
+    "simple-git-hooks": "^2.11.1",
     "typescript": "^5.4.5",
     "vite": "^5.2.11"
   }
